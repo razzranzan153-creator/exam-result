@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exam Result</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#eee;font-family:Arial,sans-serif;color:#222}
+header{background:#8b0000;color:#fff;text-align:center;padding:25px}
+header h1{margin:0 0 8px;font-size:34px}
+header p{margin:0}
+nav{background:#222;text-align:center}
+nav a{display:inline-block;color:#fff;text-decoration:none;padding:15px 20px}
+nav a:hover{background:#b00000}
+.container{max-width:1100px;width:94%;margin:auto}
+.notice{background:#fff;margin:15px 0;padding:14px;text-align:center;border:1px solid #ddd}
+.notice b{color:red}
+.search{text-align:center;margin:20px 0}
+.search input{width:70%;padding:13px;border:1px solid #aaa;font-size:16px}
+.search button{padding:14px 22px;background:#8b0000;color:#fff;border:0;cursor:pointer}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.box{background:#fff;border:1px solid #ccc;min-height:280px}
+.box h2{margin:0;background:#8b0000;color:#fff;text-align:center;padding:12px;font-size:21px}
+.box ul{padding:15px 30px}
+.box li{margin:0 0 15px}
+.box a{color:#0645ad}
+footer{margin-top:30px;background:#222;color:#fff;text-align:center;padding:25px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}nav a{width:50%}.search input{width:65%}}
+</style>
+</head>
+<body>
+<header>
+<h1>EXAM RESULT</h1>
+<p>Latest Jobs • Results • Admit Card • Answer Key</p>
+</header>
+
+<nav>
+<a href="#">Home</a>
+<a href="#jobs">Latest Jobs</a>
+<a href="#results">Results</a>
+<a href="#admit">Admit Card</a>
+<a href="#answer">Answer Key</a>
+</nav>
+
+<div class="container">
+<div class="notice">🔔 Latest Update: <b>New Exam Result & Job Updates Available</b></div>
+
+<div class="search">
+<input id="search" type="text" placeholder="Search Result, Job, Admit Card..." onkeyup="searchItems()">
+<button onclick="searchItems()">Search</button>
+</div>
+
+<div class="grid">
+<section class="box" id="jobs">
+<h2>Latest Jobs</h2>
+<ul class="items">
+<li><a href="#">Bihar Police Constable Recruitment 2026</a></li>
+<li><a href="#">SSC GD Recruitment 2026</a></li>
+<li><a href="#">Railway Group D Vacancy 2026</a></li>
+<li><a href="#">Bihar Teacher Recruitment 2026</a></li>
+<li><a href="#">UPSC Recruitment 2026</a></li>
+</ul>
+</section>
+
+<section class="box" id="results">
+<h2>Latest Results</h2>
+<ul class="items">
+<li><a href="#">Bihar Board 12th Result 2026</a></li>
+<li><a href="#">Bihar Board 10th Result 2026</a></li>
+<li><a href="#">SSC GD Result 2026</a></li>
+<li><a href="#">Railway Group D Result 2026</a></li>
+<li><a href="#">University Result 2026</a></li>
+</ul>
+</section>
+
+<section class="box" id="admit">
+<h2>Admit Card</h2>
+<ul class="items">
+<li><a href="#">Bihar Police Admit Card 2026</a></li>
+<li><a href="#">SSC GD Admit Card 2026</a></li>
+<li><a href="#">RRB Group D Admit Card 2026</a></li>
+<li><a href="#">Bihar Teacher Admit Card 2026</a></li>
+<li><a href="#">Entrance Exam Admit Card</a></li>
+</ul>
+</section>
+
+<section class="box" id="answer">
+<h2>Answer Key</h2>
+<ul class="items">
+<li><a href="#">Bihar Police Answer Key 2026</a></li>
+<li><a href="#">SSC GD Answer Key 2026</a></li>
+<li><a href="#">Railway Answer Key 2026</a></li>
+<li><a href="#">Bihar Board Answer Key 2026</a></li>
+<li><a href="#">University Answer Key 2026</a></li>
+</ul>
+</section>
+</div>
+</div>
+
+<footer>© 2026 Exam Result | Latest Jobs • Results • Admit Card</footer>
+
+<script>
+function searchItems(){
+ let q=document.getElementById("search").value.toLowerCase();
+ document.querySelectorAll(".items li").forEach(function(x){
+   x.style.display=x.innerText.toLowerCase().includes(q)?"list-item":"none";
+ });
+}
+</script>
+</body>
+</html>
